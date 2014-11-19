@@ -3,7 +3,7 @@ proxyd
 
 a proxy server
 
-Based on (goproxy)[https://github.com/elazarl/goproxy]
+Based on [goproxy](https://github.com/elazarl/goproxy)
 
 
 ## Install

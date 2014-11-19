@@ -1,0 +1,5 @@
+check process proxyd with pidfile /home/deployer/proxyd.pid
+	start program = "/usr/bin/env /bin/bash -c 'cd /home/deployer && ./proxyd -pid /home/deployer/proxyd.pid'" as uid deployer and gid deployer
+	stop program = "/usr/bin/env kill `cat /home/deployer/proxyd.pid`'"
+	if cpu > 95% for 3 cycles then restart
+	if memory > 2000 MB then restart
